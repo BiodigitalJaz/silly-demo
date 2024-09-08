@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: build
+  name: kpack-build-role
+rules:
+  - apiGroups: [""]
+    resources: ["pods", "secrets"]
+    verbs: ["get", "list", "watch", "create", "update", "delete"]
+  - apiGroups: ["kpack.io"]
+    resources: ["images", "builds", "builders"]
+    verbs: ["get", "list", "watch", "create", "update", "delete"]
