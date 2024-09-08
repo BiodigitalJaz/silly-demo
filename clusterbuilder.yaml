@@ -12,9 +12,7 @@ spec:
     kind: ClusterStore
   order:
     - group:
-        - id: "paketo-buildpacks/java"
-    - group:
-        - id: "paketo-buildpacks/nodejs"
+        - id: "paketo-buildpacks/go"  # Paketo Go buildpack
   serviceAccountRef:
     name: registry-creds
     namespace: build
